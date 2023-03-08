@@ -202,6 +202,27 @@ header{
     background: hsl(249, 32%,17%);
 }
 
+.alert{
+    position: absolute;
+    top:-4rem;
+    left:50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 100px;
+    background: var(--text-color); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size:1.6rem;
+    border-radius: 2px;
+    transition: 1s;
+    opacity: .9;
+}
+.alert.active{
+   top:3rem;
+}
+
 /* Breakpoints */
 
 @media ( max-width:1080px) {
@@ -230,6 +251,7 @@ header{
    .cart{
     width: 320px;
    }
+   
 }
 @media ( max-width:360px) {
     .shop{
@@ -238,4 +260,11 @@ header{
        .cart{
         width: 280px;
        }
+       
 }
+
+body{
+    position: relative;
+}
+
+

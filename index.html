@@ -11,11 +11,10 @@
 </head>
 <body>
     <header><!--! header start-->
-
         <div class="nav container">
             <a href="#" class="logo">Alisveris Sepeti</a>
             <i id="cart-icon" class="bx bx-shopping-bag"></i>
-            <div class="cart">
+            <div class="cart"><!--! cart start-->
                 <h2 class="cart-title">Alışveriş Sepetim</h2>
                  <div class="cart-content">
                   <!-- bunun içeriği js de -->
@@ -29,12 +28,11 @@
                      <button class="btn-buy" type="button">Ödemeyi Tamamla</button>
                      <!-- cart close -->
                      <i class="bx bx-x" id="close-cart"></i>
-                 </div>      
-            </div>
+                 </div><!--! cart end-->  
+        </div>
     </header><!--! header end-->
 
     <section class="shop container"> <!--! section shop start-->
-      
         <h2 class="section-title">Mağaza Ürünleri</h2>
         <div class="shop-content">
             <div class="product-box"> <!-- Product box1 start-->
@@ -86,9 +84,11 @@
                 <i class="bx bx-shopping-bag add-cart"></i>
             </div> <!-- Product box2 end-->
         </div>
-
-
     </section><!--! section shop start-->
+
+    <div class="alert">
+        <div class="alert-title">Siparisiniz alındı</div>
+   </div>  
 
 
     <script src="script.js"></script>

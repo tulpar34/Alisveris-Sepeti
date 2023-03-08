@@ -8,9 +8,9 @@ cartIcon.addEventListener('click', () => {
 })
 // close cart
 closeCart.addEventListener('click', () => {
-    cart.classList.remove('active')
+    cart.classList.remove('active');
+    document.querySelector('.alert').classList.remove('active') //alert button
 })
-
 
 // cart working js
 if(document.readyState == 'loading') {
@@ -19,17 +19,15 @@ if(document.readyState == 'loading') {
 }else{
     ready();
 }
-
 // making function
 function ready() {
     //remove items from cart
     let removeCartButtons = document.querySelectorAll('.cart-remove')
-
     removeCartButtons.forEach(element => {
         element.addEventListener('click', removeCartItem)
     })
 
-    // quantity chages
+    // quantity changes
     var quantityInputs = document.querySelectorAll('.cart-quantity');
     quantityInputs.forEach(element => {
         var input = element;
@@ -67,7 +65,7 @@ function addCartClicked(event) {
   var title = shopProducts.querySelectorAll('.product-title')[0].innerText
   var price = shopProducts.querySelectorAll('.price')[0].innerText
   var productImg = shopProducts.querySelectorAll('.product-img')[0].src
-//    console.log(title,price,productImg);
+//console.log(title,price,productImg);
    addProductToCart(title,price,productImg);
    updateTotal();
 }
@@ -117,7 +115,9 @@ function updateTotal() {
 }
 
 function buyButtonClicked() {
-    alert('Siparişiniz Alındı');
+   setTimeout(() => {
+    document.querySelector('.alert').classList.add('active') //alert button
+   },500)
     var cartContent = document.querySelectorAll('.cart-content')[0]
     while(cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild)
